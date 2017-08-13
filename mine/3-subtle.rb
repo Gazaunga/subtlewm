@@ -452,7 +452,7 @@ grab "W-S-l", :WindowMoveRight
 grab "W-S-c", :WindowKill
 
 # Run dmenu
-grab "W-S-p", "dmenu_run -b"
+grab "W-S-p", "rofi -show run"
 
 # Cycle between given gravities
 # In case no numpad is available e.g. on notebooks
