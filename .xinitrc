@@ -1,2 +1,3 @@
-emacs --daemon
+#emacs --daemon
+exec subtle
 emacs -fs
