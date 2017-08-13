@@ -37,3 +37,45 @@
 
 (use-package avy :ensure t
   :commands (avy-goto-word-1))
+
+(require 'general)
+(general-define-key
+  ;; replace default keybindings
+  "C-s" 'swiper             ; search for string in current buffer
+  "M-x" 'counsel-M-x        ; replace default M-x with ivy backend
+  :prefix "C-c"
+  ;; bind to simple key press
+  "b"	'ivy-switch-buffer  ; change buffer, chose using ivy
+  ;; bind to double key press
+  "f"   '(:ignore t :which-key "files")
+  "ff"  'counsel-find-file  ; find file using ivy
+  "fr"	'counsel-recentf    ; find recently edited files 
+  )
+
+(use-package general :ensure t
+  :config
+  (general-define-key
+   :states '(normal visual insert emacs)
+   :prefix "SPC"
+   :non-normal-prefix "C-SPC"
+
+    ;; simple command
+    "'"   '(iterm-focus :which-key "iterm")
+    "?"   '(iterm-goto-filedir-or-home :which-key "iterm - goto dir")
+    "/"   'counsel-ag
+    "TAB" '(switch-to-other-buffer :which-key "prev buffer")
+    "SPC" '(avy-goto-word-or-subword-1  :which-key "go to char")
+
+    ;; Applications
+    "a" '(:ignore t :which-key "Applications")
+    "ar" 'ranger
+    "ad" 'dired))
+
+(use-package which-key :ensure t
+ :config
+ (which-key-add-key-based-replacement
+  "C-c f" "file"
+  "C-c ff" "find file"
+  "C-c fr" "recently edited"
+  "C-c p"  "project"))
+
