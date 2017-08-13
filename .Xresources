@@ -1,4 +1,4 @@
-*.font: xft:Nanum Gothic Font:pixelsize=12
+*font: xft:Hack:size=14
 
 Xft.dpi:                        96
 Xft.antialias:                  1
