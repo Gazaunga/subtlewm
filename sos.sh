@@ -37,3 +37,8 @@ sur install cpuchart=0.3
 sur install Spotify-0.1
 sur install AMixer-0.2
 sur install ACPI-0.2
+
+cd ~
+mkdir .config
+cd .config
+mv ~/subtlewm/mine/3-subtle.rb ~/.config/subtle.rb
