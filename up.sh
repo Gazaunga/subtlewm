@@ -23,8 +23,8 @@ git config --global core.autocrlf input
 git config --global core.safecrlf true
 
 cd ~
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-wget https://raw.githubusercontent.com/Gazaunga/Spacemacs/master/.spacemacs -O .spacemacs
+#git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+#wget https://raw.githubusercontent.com/Gazaunga/Spacemacs/master/.spacemacs -O .spacemacs
 
 sur install Clock-0.33
 sur install Cpu-0.3
