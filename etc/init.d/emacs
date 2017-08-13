@@ -7,17 +7,17 @@
 ### END INIT INFO
 
 #change this
-USERNAME=YourUserName
+USERNAME=gazbit
 eval USERHOME=~$USERNAME
 DESC="Run the emacs daemon."
 NAME=emacs
 #change this
-DAEMON=/opt/emacs23/bin/$NAME
+DAEMON=/opt/emacs25/bin/$NAME
 DAEMON_ARGS="--daemon"
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
 #change this
-EMACSCLIENT=/opt/emacs23/bin/emacsclient
+EMACSCLIENT=/opt/emacs25/bin/emacsclient
 EVALEXIT="(progn (kill-emacs))"
 
 # Exit if the package is not installed
